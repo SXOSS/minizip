@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@ --parallel --with autoreconf
+
+override_dh_auto_build:
+	dh_auto_build -- minizip miniunzip
+
+override_dh_clean:
+	dh_clean -- minizip miniunzip

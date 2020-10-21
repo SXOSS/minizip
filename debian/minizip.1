@@ -1,0 +1,48 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.TH minizip 1 "May 2, 2001"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+minizip - create ZIP archives
+.SH SYNOPSIS
+.B minizip
+.RI [ options ]
+zipfile [ " files" ... ]
+.SH DESCRIPTION
+.B minizip
+is a simple tool which allows the creation of compressed file archives
+in the ZIP format used by the MS-DOS utility PKZIP.  It was written as
+a demonstration of the
+.IR zlib (3)
+library and therefore lack many of the features of the
+.IR zip (1)
+program.
+.SH OPTIONS
+The first non-option argument is the name of the ZIP archive to create.
+.PP
+Subsequent arguments specify a list of files to add to the ZIP
+archive.  If none are specified then an empty archive will be created.
+.PP
+For information about the available
+.RI [ options ]
+type
+.PP
+.B minizip -h
+.SH SEE ALSO
+.BR miniunzip (1),
+.BR zlib (3),
+.BR zip (1).
+.SH AUTHOR
+This program was written by Gilles Vollant.  This manual page was
+written by Mark Brown <broonie@sirena.org.uk>.
+
